@@ -2,6 +2,8 @@
 
 (require rackunit)
 
+(provide every?)
+
 (define (every? pred lst)
   (cond [(null? lst) #t]
         [(pred (car lst)) (every? pred (cdr lst))]
