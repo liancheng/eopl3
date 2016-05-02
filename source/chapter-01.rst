@@ -477,3 +477,10 @@ Exercise 1.35
 .. literalinclude:: 01-35.scm
     :language: scheme
     :linenos:
+
+Exercise 1.36
+=============
+
+.. literalinclude:: 01-36.scm
+    :language: scheme
+    :linenos:
