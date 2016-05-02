@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (subst new old slist)
   (if (null? slist)
     '()
@@ -10,4 +12,5 @@
           (subst new old head))
         (subst new old tail)))))
 
-(eopl:pretty-print (subst 'b 'a '(a (b (c a (d) e)))))
+(check-equal? (subst 'b 'a '(a (b (c a (d) e))))
+              '(b (b (c b (d) e))))

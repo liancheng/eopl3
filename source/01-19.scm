@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (list-set lst n x)
   (if (zero? n)
     (cons x (cdr lst))
@@ -7,4 +9,5 @@
       (car lst)
       (list-set (cdr lst) (- n 1) x))))
 
-(eopl:pretty-print (list-set '(a b c d) 2 '(1 2)))
+(check-equal? (list-set '(a b c d) 2 '(1 2))
+              '(a b (1 2) d))

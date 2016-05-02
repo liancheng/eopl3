@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (swapper s1 s2 slist)
   (map (lambda (sexp)
          (swapper-in-s-sexp s1 s2 sexp))
@@ -13,6 +15,11 @@
                       [else sexp])]
     [else (swapper s1 s2 sexp)]))
 
-(eopl:pretty-print (swapper 'a 'd '(a b c d)))
-(eopl:pretty-print (swapper 'a 'd '(a d () c d)))
-(eopl:pretty-print (swapper 'x 'y '((x) y (z (x)))))
+(check-equal? (swapper 'a 'd '(a b c d))
+              '(d b c a))
+
+(check-equal? (swapper 'a 'd '(a d () c d))
+              '(d a () c a))
+
+(check-equal? (swapper 'x 'y '((x) y (z (x))))
+              '((y) x (z (y))))

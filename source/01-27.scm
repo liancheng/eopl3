@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (flatten slist)
   (cond [(null? slist) '()]
         [(list? (car slist)) (append (flatten (car slist))
@@ -7,7 +9,7 @@
         [else (cons (car slist)
                     (flatten (cdr slist)))]))
 
-(eopl:pretty-print (flatten '(a b c)))
-(eopl:pretty-print (flatten '((a) () (b ()) () (c))))
-(eopl:pretty-print (flatten '((a b) c (((d)) e))))
-(eopl:pretty-print (flatten '(a b (() (c)))))
+(check-equal? (flatten '(a b c)) '(a b c))
+(check-equal? (flatten '((a) () (b ()) () (c))) '(a b c))
+(check-equal? (flatten '((a b) c (((d)) e))) '(a b c d e))
+(check-equal? (flatten '(a b (() (c)))) '(a b c))

@@ -1,6 +1,7 @@
 #lang eopl
 
-(require "01-31.scm")
+(require "01-31.scm"
+         rackunit)
 
 (define (number-leaves tree)
   (define (number n node)
@@ -17,7 +18,7 @@
                                     new-rson)))))
   (cadr (number 0 tree)))
 
-(eopl:pretty-print
+(check-equal?
   (number-leaves
     (interior-node 'foo
                    (interior-node 'bar
@@ -27,4 +28,7 @@
                                   (leaf 11)
                                   (interior-node 'quux
                                                  (leaf 117)
-                                                 (leaf 14))))))
+                                                 (leaf 14)))))
+  '(foo (bar 0 1)
+        (baz 2
+             (quux 3 4))))

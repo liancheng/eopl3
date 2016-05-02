@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (require "01-28.scm")
 
 (define (sort loi)
@@ -10,4 +12,5 @@
                                   (merge-sort (cddr lst))))]))
   (car (merge-sort (map list loi))))
 
-(eopl:pretty-print (sort '(8 2 5 2 3)))
+(check-equal? (sort '(8 2 5 2 3))
+              '(2 2 3 5 8))

@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (product sos1 sos2)
   (flat-map (lambda (e1)
               (map (lambda (e2)
@@ -13,4 +15,5 @@
     (append (proc (car lst))
             (flat-map proc (cdr lst)))))
 
-(eopl:pretty-print (product '(a b c) '(x y)))
+(check-equal? (product '(a b c) '(x y))
+              '((a x) (a y) (b x) (b y) (c x) (c y)))

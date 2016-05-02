@@ -1,6 +1,7 @@
 #lang eopl
 
-(require "01-31.scm")
+(require "01-31.scm"
+         rackunit)
 
 (define (double-tree tree)
   (cond [(leaf? tree)
@@ -10,8 +11,10 @@
                          (double-tree (lson tree))
                          (double-tree (rson tree)))]))
 
-(eopl:pretty-print (interior-node 'foo
-                                  (leaf 1)
-                                  (interior-node 'bar
-                                                 (leaf 3)
-                                                 (leaf 3))))
+(check-equal? (double-tree
+                (interior-node 'foo
+                               (leaf 1)
+                               (interior-node 'bar
+                                              (leaf 3)
+                                              (leaf 3))))
+              '(foo 2 (bar 6 6)))

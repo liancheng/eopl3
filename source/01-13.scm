@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (subst new old slist)
   (map (lambda (sexp)
          (subst-in-s-exp new old sexp))
@@ -10,4 +12,5 @@
     (if (eqv? sexp old) new sexp)
     (subst new old sexp)))
 
-(eopl:pretty-print (subst 'b 'a '(a (b (c a (d) e)))))
+(check-equal? (subst 'b 'a '(a (b (c a (d) e))))
+              '(b (b (c b (d) e))))

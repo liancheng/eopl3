@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (number-elements lst)
   (if (null? lst) '()
     (g (list 0 (car lst)) (number-elements (cdr lst)))))
@@ -12,6 +14,11 @@
            (new-next (cons (+ n 1) (cdr next)))]
       (cons head (g new-next (cdr tail))))))
 
-(eopl:pretty-print (number-elements '()))
-(eopl:pretty-print (number-elements '(a)))
-(eopl:pretty-print (number-elements '(a b c d)))
+(check-equal? (number-elements '())
+              '())
+
+(check-equal? (number-elements '(a))
+              '((0 a)))
+
+(check-equal? (number-elements '(a b c d))
+              '((0 a) (1 b) (2 c) (3 d)))

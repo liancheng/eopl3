@@ -1,5 +1,7 @@
 #lang eopl
 
+(require racket rackunit)
+
 (define (nth-element lst n)
   (let nth-element-impl ([lst0 lst] [n0 n])
     (if (null? lst0)
@@ -12,5 +14,8 @@
   (eopl:error 'nth-element
               "List ~s does not have ~s elements" lst n))
 
-(eopl:pretty-print (nth-element '(a b c) 2))
-(eopl:pretty-print (nth-element '(a b c) 4))
+(check-equal? (nth-element '(a b c) 2)
+              'c)
+
+(check-exn (regexp "List \\(a b c\\) does not have 4 elements")
+           (lambda () (nth-element '(a b c) 4)))

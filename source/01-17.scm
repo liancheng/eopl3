@@ -1,7 +1,12 @@
 #lang eopl
 
+(require rackunit)
+
 (define (down lst)
   (map list lst))
 
-(eopl:pretty-print (down '(1 2 3)))
-(eopl:pretty-print (down '(a (more (compliated)) object)))
+(check-equal? (down '(1 2 3))
+              '((1) (2) (3)))
+
+(check-equal? (down '(a (more (compliated)) object))
+              '((a) ((more (compliated))) (object)))

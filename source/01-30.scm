@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (sort/predicate pred loi)
   (define (merge-sort lst)
     (cond [(null? lst) '()]
@@ -16,5 +18,8 @@
         [else (cons (car loi2)
                     (merge/predicate pred loi1 (cdr loi2)))]))
 
-(eopl:pretty-print (sort/predicate < '(8 2 5 2 3)))
-(eopl:pretty-print (sort/predicate > '(8 2 5 2 3)))
+(check-equal? (sort/predicate < '(8 2 5 2 3))
+              '(2 2 3 5 8))
+
+(check-equal? (sort/predicate > '(8 2 5 2 3))
+              '(8 5 3 2 2))

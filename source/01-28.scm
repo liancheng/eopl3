@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (provide merge)
 
 (define (merge loi1 loi2)
@@ -10,5 +12,8 @@
         [else (cons (car loi2)
                     (merge loi1 (cdr loi2)))]))
 
-(eopl:pretty-print (merge '(1 4) '(1 2 8)))
-(eopl:pretty-print (merge '(35 62 81 90 91) '(3 83 85 90)))
+(check-equal? (merge '(1 4) '(1 2 8))
+              '(1 1 2 4 8))
+
+(check-equal? (merge '(35 62 81 90 91) '(3 83 85 90))
+              '(3 35 62 81 83 85 90 90 91))

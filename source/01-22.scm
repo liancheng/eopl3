@@ -1,5 +1,7 @@
 #lang eopl
 
+(require rackunit)
+
 (define (filter-in pred lst)
   (if (null? lst)
     '()
@@ -9,4 +11,4 @@
         (cons head filtered-tail)
         filtered-tail))))
 
-(eopl:pretty-print (filter-in number? '(a 2 (1 3) b 7)))
+(check-equal? (filter-in number? '(a 2 (1 3) b 7)) '(2 7))
