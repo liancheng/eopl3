@@ -63,7 +63,7 @@ Exercise 1.1
         A pair of natural numbers :math:`(n, m)` is in :math:`S` if and only if
 
         #.  :math:`n = 0` and :math:`m = 1`, or
-        #.  :math:`(n - 1, n - 2) \in S`
+        #.  :math:`(n - 1, m - 2) \in S`
 
     Bottom-up:
         Define the set :math:`S` to be the smallest set contained in :math:`\{n, m \mid n \in N, m \in N\}` and satisfying the following two properties:
@@ -114,7 +114,7 @@ Exercise 1.2
 
     .. math::
 
-        \{(n, 7k + 1) \mid n \in N, k \in N\}
+        \{(n, 7n + 1) \mid n \in N\}
 
 #.  :math:`(0, 1) \in S \quad \displaystyle \frac{(n, k) \in S}{(n + 1, 2k) \in S}`
 
