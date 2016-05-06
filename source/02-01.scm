@@ -53,9 +53,42 @@
     (successor (zero))
     (multiply n (factorial (predecessor n)))))
 
+(define (with-base n thunk)
+  (let [(orig-base base)]
+    (begin
+      (set! base n)
+      (thunk)
+      (set! base orig-base))))
+
+(with-base 2 (lambda ()
+               (eopl:printf "Base ~s: 10! = ~s~%"
+                            base
+                            (nat->int (factorial (int->nat 10))))))
+
+(with-base 32 (lambda ()
+                (eopl:printf "Base ~s: 10! = ~s~%"
+                             base
+                             (nat->int (factorial (int->nat 10))))))
+
+(with-base 1024 (lambda ()
+                (eopl:printf "Base ~s: 10! = ~s~%"
+                             base
+                             (nat->int (factorial (int->nat 10))))))
+
+(with-base 16 (lambda ()
+                (eopl:printf "Base ~s: 9! = ~s~%"
+                             base
+                             (nat->int (factorial (int->nat 9))))
+                (eopl:printf "Base ~s: 10! = ~s~%"
+                             base
+                             (nat->int (factorial (int->nat 10))))
+                (eopl:printf "Base ~s: 11! = ~s~%"
+                             base
+                             (nat->int (factorial (int->nat 11))))))
+
 (run-tests
   (test-suite
-    "Tests for bigits"
+    "Tests for nat"
 
     (test-case
       "basic operations"

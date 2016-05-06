@@ -1,5 +1,5 @@
-EOPL3 Exercises
-===============
+Solutions to EoPL3 Exercises
+============================
 
 ########
 Contents
@@ -15,9 +15,9 @@ Contents
 Overview
 ########
 
-This documentation is my answers to `EoPL3`__ exercises. The source code can be found on `GitHub`__.
+This documentation is my (incomplete) solutions to `EoPL3`__ exercises. The source code can be found on `GitHub`__.
 
-The Scheme code is written using in the ``eopl`` language package provided by DrRacket 6.4. Please refer to `the official DrRacket documentation`__ for more details. 
+The Scheme code is written using the ``eopl`` dialect provided by DrRacket 6.4. Please refer to `the official DrRacket documentation`__ for more details. Most code snippets are tested using ``rackunit``.
 
 To run the code, first install Racket 6.4+, then install the ``eopl`` package::
 

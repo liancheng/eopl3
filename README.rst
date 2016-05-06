@@ -7,5 +7,4 @@ To run the code, first install Racket 6.4+, then install the ``eopl`` package::
     $ raco pkg install eopl
 
 __ http://www.eopl3.com/
-__ http://github.com/liancheng/eopl3/
 __ http://docs.racket-lang.org/eopl/
