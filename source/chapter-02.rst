@@ -107,23 +107,28 @@ Constructors:
 .. math::
 
     (\text{empty-stack}) &=
-        \lceil \text{'()} \rceil \\
+        \lceil \emptyset \rceil \\
     (\text{push} \; \lceil e \rceil \; \lceil stk \rceil) &=
-        \lceil (\text{cons} \; e \; stk) \rceil \\
-    (\text{pop} \; \lceil stk \rceil) &=
-        \lceil (\text{cdr} \; stk) \rceil \\
+        \lceil stk' \rceil, \text{where }
+        (\text{top} \; \lceil stk' \rceil) = \lceil e \rceil \\
 
 Observers:
 
 .. math::
 
-    (\text{top} \; \lceil stk \rceil) &=
-        \lceil (\text{car} \; stk) \rceil \\
-    (\text{empty-stack?} \; stk) &=
+    (\text{empty-stack?} \; \lceil stk \rceil) &=
         \begin{cases}
-            \text{#t}, & \text{if } stk = \lceil \text{'()} \rceil \\
-            \text{#f}, & \text{otherwise}
-        \end{cases}
+            \text{#t} & \text{if } stk = \lceil \emptyset \rceil \\
+            \text{#f} & \text{otherwise}
+        \end{cases} \\
+    (\text{top} \; \lceil stk \rceil) &=
+        \lceil e \rceil, \text{where }
+        \lceil stk \rceil =
+            (\text{push} \; \lceil e \rceil \; (\text{pop} \; \lceil stk \rceil)) \\
+    (\text{pop} \; \lceil stk \rceil) &=
+        \lceil stk' \rceil, \text{where }
+        (\text{push} \; (\text{top} \; \lceil stk \rceil) \; \lceil stk' \rceil) =
+            \lceil stk \rceil
 
 Exercise 2.5
 ============

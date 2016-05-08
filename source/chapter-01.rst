@@ -134,8 +134,8 @@ Exercise 1.2
 
         F(n) =
             \begin{cases}
-                0, & n = 0 \\
-                1, & n = 1 \\
+                0 & n = 0 \\
+                1 & n = 1 \\
                 F(n - 1) + F(n - 2), & n > 1
             \end{cases}
 
@@ -306,8 +306,8 @@ Proof:
 
         f(n) =
             \begin{cases}
-                v_0,            & n = 0 \\
-                v_n + f(n - 1), & n > 0
+                v_0            & n = 0 \\
+                v_n + f(n - 1) & n > 0
             \end{cases}
 
     Let's prove by induction on :math:`n`. The induction hypothesis :math:`IH(k)`, is
