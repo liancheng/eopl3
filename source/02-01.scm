@@ -4,12 +4,20 @@
          rackunit
          rackunit/text-ui)
 
+(provide base set-base!
+         zero is-zero?
+         successor predecessor
+         integer->bigits bigits->integer
+         plus multiply factorial)
+
 (define base 10)
+
+(define (set-base! n)
+  (set! base n))
 
 (define (zero) '())
 
-(define (is-zero? n)
-  (every? zero? n))
+(define is-zero? null?)
 
 (define (successor n)
   (cond [(is-zero? n)
@@ -21,21 +29,21 @@
 
 (define (predecessor n)
   (cond [(= 1 (car n))
-         (if (null? (cdr n)) '() (cons 0 (cdr n)))]
+         (if (null? (cdr n)) (zero) (cons 0 (cdr n)))]
         [(> (car n) 0)
          (cons (- (car n) 1) (cdr n))]
         [else
           (cons (- base 1) (predecessor (cdr n)))]))
 
-(define (int->nat n)
+(define (integer->bigits n)
   (if (zero? n)
     (zero)
-    (successor (int->nat (- n 1)))))
+    (successor (integer->bigits (- n 1)))))
 
-(define (nat->int n)
+(define (bigits->integer n)
   (if (is-zero? n)
     0
-    (+ 1 (nat->int (predecessor n)))))
+    (+ 1 (bigits->integer (predecessor n)))))
 
 (define (plus x y)
   (if (is-zero? x)
@@ -53,87 +61,72 @@
     (successor (zero))
     (multiply n (factorial (predecessor n)))))
 
-(define (with-base n thunk)
-  (let [(orig-base base)]
-    (begin
-      (set! base n)
-      (thunk)
-      (set! base orig-base))))
-
-(with-base 2 (lambda ()
-               (eopl:printf "Base ~s: 10! = ~s~%"
-                            base
-                            (nat->int (factorial (int->nat 10))))))
-
-(with-base 32 (lambda ()
-                (eopl:printf "Base ~s: 10! = ~s~%"
-                             base
-                             (nat->int (factorial (int->nat 10))))))
-
-(with-base 1024 (lambda ()
-                (eopl:printf "Base ~s: 10! = ~s~%"
-                             base
-                             (nat->int (factorial (int->nat 10))))))
-
-(with-base 16 (lambda ()
-                (eopl:printf "Base ~s: 9! = ~s~%"
-                             base
-                             (nat->int (factorial (int->nat 9))))
-                (eopl:printf "Base ~s: 10! = ~s~%"
-                             base
-                             (nat->int (factorial (int->nat 10))))
-                (eopl:printf "Base ~s: 11! = ~s~%"
-                             base
-                             (nat->int (factorial (int->nat 11))))))
-
 (run-tests
   (test-suite
-    "Tests for nat"
-
-    (test-case
-      "basic operations"
-      (check-equal? (zero) '())
-
-      (check-equal? (is-zero? (zero)) #t)
-      (check-equal? (is-zero? '(0 0 0)) #t)
-      (check-equal? (is-zero? '()) #t)
-
-      (check-equal? (is-zero? '(0 1)) #f)
-
-      (check-equal? (successor (zero)) '(1))
-      (check-equal? (successor (list (- base 1))) '(0 1))
-      (check-equal? (successor (successor (zero))) '(2))
-
-      (check-equal? (predecessor (successor (zero))) (zero))
-      (check-equal? (predecessor (predecessor '(3))) '(1))
-      (check-equal? (predecessor '(0 1)) '(9)))
+    "Tests for bigits"
 
     (test-case
       "converters"
-      (check-equal? (int->nat 1024) '(4 2 0 1))
-      (check-equal? (nat->int '(4 2 0 1)) 1024))
+      (check-equal? (integer->bigits 1024) '(4 2 0 1))
+      (check-equal? (bigits->integer '(4 2 0 1)) 1024))
 
-    (test-case
-      "arithmetic operations"
-      (check-equal? (plus (int->nat 2)
-                          (int->nat 9))
-                    (int->nat 11))
+    (map (lambda (n)
+           (let [(original-base base)]
+             (around
+               (set! base n)
 
-      (check-equal? (plus (int->nat 0)
-                          (int->nat 2))
-                    (int->nat 2))
+               (test-case
+                 "basic operations"
+                 (check-equal? (zero) '())
 
-      (check-equal? (multiply (int->nat 0)
-                              (int->nat 2))
-                    (int->nat 0))
+                 (check-equal? (is-zero? (zero)) #t)
+                 (check-equal? (is-zero? '()) #t)
 
-      (check-equal? (multiply (int->nat 1)
-                              (int->nat 2))
-                    (int->nat 2))
+                 (check-equal? (is-zero? '(0 1)) #f)
 
-      (check-equal? (multiply (int->nat 6)
-                              (int->nat 7))
-                    (int->nat 42))
+                 (check-equal? (successor (zero))
+                               (integer->bigits 1))
 
-      (check-equal? (nat->int (factorial (int->nat 10)))
-                    (* 10 9 8 7 6 5 4 3 2 1)))))
+                 (check-equal? (successor (list (- base 1)))
+                               (integer->bigits base))
+
+                 (check-equal? (successor (successor (zero)))
+                               (integer->bigits 2))
+
+                 (check-equal? (predecessor (successor (zero)))
+                               (zero))
+
+                 (check-equal? (predecessor (predecessor (integer->bigits 3)))
+                               (integer->bigits 1))
+
+                 (check-equal? (predecessor (integer->bigits 10))
+                               (integer->bigits 9)))
+
+               (test-case
+                 "arithmetic operations"
+                 (check-equal? (plus (integer->bigits 2)
+                                     (integer->bigits 9))
+                               (integer->bigits 11))
+
+                 (check-equal? (plus (integer->bigits 0)
+                                     (integer->bigits 2))
+                               (integer->bigits 2))
+
+                 (check-equal? (multiply (integer->bigits 0)
+                                         (integer->bigits 2))
+                               (integer->bigits 0))
+
+                 (check-equal? (multiply (integer->bigits 1)
+                                         (integer->bigits 2))
+                               (integer->bigits 2))
+
+                 (check-equal? (multiply (integer->bigits 6)
+                                         (integer->bigits 7))
+                               (integer->bigits 42))
+
+                 (check-equal? (bigits->integer (factorial
+                                                  (integer->bigits 10)))
+                               (* 10 9 8 7 6 5 4 3 2 1)))
+
+               (set! base original-base))))
+         '(2 3 4 8 16 32 1024))))

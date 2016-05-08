@@ -23,6 +23,10 @@ To run the code, first install Racket 6.4+, then install the ``eopl`` package::
 
     $ raco pkg install eopl
 
+After installing the ``eopl`` package, running the scheme code should be as easy as::
+
+    $ racket <file-path>
+
 __ http://www.eopl3.com/
 __ http://github.com/liancheng/eopl3/
 __ http://docs.racket-lang.org/eopl/
