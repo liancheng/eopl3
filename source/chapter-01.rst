@@ -250,7 +250,7 @@ The procedure may crash when given an empty list because we are trying to apply 
 Exercise 1.7
 ============
 
-.. literalinclude:: 01-07.scm
+.. literalinclude:: 01-07.rkt
     :language: scheme
     :linenos:
 
@@ -268,7 +268,7 @@ If the last line is replaced, this procedure drops the first occurrence of ``s``
 Exercise 1.9
 ============
 
-.. literalinclude:: 01-09.scm
+.. literalinclude:: 01-09.rkt
     :language: scheme
     :linenos:
 
@@ -285,14 +285,14 @@ The thing that gets smaller is the number of occurrences of ``old``.
 Exercise 1.12
 =============
 
-.. literalinclude:: 01-12.scm
+.. literalinclude:: 01-12.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.13
 =============
 
-.. literalinclude:: 01-13.scm
+.. literalinclude:: 01-13.rkt
     :language: scheme
     :linenos:
 
@@ -334,153 +334,153 @@ Proof:
 Exercise 1.15
 =============
 
-.. literalinclude:: 01-15.scm
+.. literalinclude:: 01-15.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.16
 =============
 
-.. literalinclude:: 01-16.scm
+.. literalinclude:: 01-16.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.17
 =============
 
-.. literalinclude:: 01-17.scm
+.. literalinclude:: 01-17.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.18
 =============
 
-.. literalinclude:: 01-18.scm
+.. literalinclude:: 01-18.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.19
 =============
 
-.. literalinclude:: 01-19.scm
+.. literalinclude:: 01-19.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.20
 =============
 
-.. literalinclude:: 01-20.scm
+.. literalinclude:: 01-20.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.21
 =============
 
-.. literalinclude:: 01-21.scm
+.. literalinclude:: 01-21.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.22
 =============
 
-.. literalinclude:: 01-22.scm
+.. literalinclude:: 01-22.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.23
 =============
 
-.. literalinclude:: 01-23.scm
+.. literalinclude:: 01-23.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.24
 =============
 
-.. literalinclude:: 01-24.scm
+.. literalinclude:: 01-24.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.25
 =============
 
-.. literalinclude:: 01-25.scm
+.. literalinclude:: 01-25.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.26
 =============
 
-.. literalinclude:: 01-26.scm
+.. literalinclude:: 01-26.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.27
 =============
 
-.. literalinclude:: 01-27.scm
+.. literalinclude:: 01-27.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.28
 =============
 
-.. literalinclude:: 01-28.scm
+.. literalinclude:: 01-28.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.29
 =============
 
-.. literalinclude:: 01-29.scm
+.. literalinclude:: 01-29.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.30
 =============
 
-.. literalinclude:: 01-30.scm
+.. literalinclude:: 01-30.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.31
 =============
 
-.. literalinclude:: 01-31.scm
+.. literalinclude:: 01-31.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.32
 =============
 
-.. literalinclude:: 01-32.scm
+.. literalinclude:: 01-32.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.33
 =============
 
-.. literalinclude:: 01-33.scm
+.. literalinclude:: 01-33.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.34
 =============
 
-.. literalinclude:: 01-34.scm
+.. literalinclude:: 01-34.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.35
 =============
 
-.. literalinclude:: 01-35.scm
+.. literalinclude:: 01-35.rkt
     :language: scheme
     :linenos:
 
 Exercise 1.36
 =============
 
-.. literalinclude:: 01-36.scm
+.. literalinclude:: 01-36.rkt
     :language: scheme
     :linenos:

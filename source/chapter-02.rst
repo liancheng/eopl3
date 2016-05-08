@@ -8,14 +8,14 @@ Exercise 2.1
 Bigits implementation
 ---------------------
 
-.. literalinclude:: 02-01.scm
+.. literalinclude:: 02-01.rkt
     :language: scheme
     :linenos:
 
 Factorial experiments
 ---------------------
 
-.. literalinclude:: 02-01-fact.scm
+.. literalinclude:: 02-01-fact.rkt
     :language: scheme
     :linenos:
 
@@ -88,14 +88,14 @@ Proof
 Question 2
 ----------
 
-.. literalinclude:: 02-03-2.scm
+.. literalinclude:: 02-03-2.rkt
     :language: scheme
     :linenos:
 
 Question 3
 ----------
 
-.. literalinclude:: 02-03-3.scm
+.. literalinclude:: 02-03-3.rkt
     :language: scheme
     :linenos:
 
@@ -133,7 +133,7 @@ Observers:
 Exercise 2.5
 ============
 
-.. literalinclude:: 02-05.scm
+.. literalinclude:: 02-05.rkt
     :language: scheme
     :linenos:
 
@@ -145,7 +145,7 @@ Implementation 1
 
 Represent environments as functions.
 
-.. literalinclude:: 02-06-1.scm
+.. literalinclude:: 02-06-1.rkt
     :language: scheme
     :linenos:
 
@@ -154,7 +154,7 @@ Implementation 2
 
 A representation that doesn't allow variable "shadowing":
 
-.. literalinclude:: 02-06-2.scm
+.. literalinclude:: 02-06-2.rkt
     :language: scheme
     :linenos:
 
@@ -163,6 +163,22 @@ Implementation 3
 
 Represent environments as "ribs": a pair consists of a list of variables and a list of values.
 
-.. literalinclude:: 02-06-3.scm
+.. literalinclude:: 02-06-3.rkt
+    :language: scheme
+    :linenos:
+
+Exercise 2.7
+============
+
+.. literalinclude:: 02-07.rkt
+    :language: scheme
+    :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
+
+Exercise 2.8
+============
+
+.. literalinclude:: 02-08.rkt
     :language: scheme
     :linenos:

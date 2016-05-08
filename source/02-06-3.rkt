@@ -3,6 +3,7 @@
 (require racket
          rackunit)
 
+;; begin
 (define (empty-env) (cons '() '()))
 
 (define (extend-env var val env)
@@ -24,6 +25,7 @@
 
 (define (report-no-binding-found search-var)
   (eopl:error 'apply-env "No binding for ~s" search-var))
+;; end
 
 (check-eqv? (apply-env
               (extend-env 'a 1 (empty-env))

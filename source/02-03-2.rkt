@@ -3,7 +3,7 @@
 (require rackunit
          rackunit/text-ui)
 
-(provide diff zero one
+(provide diff one
          zero is-zero?
          integer->diff-tree diff-tree->integer
          diff-tree=?
