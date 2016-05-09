@@ -2,6 +2,10 @@
 
 (require racket rackunit)
 
+(provide empty-env
+         extend-env
+         apply-env)
+
 (define (empty-env) '())
 
 (define (extend-env var val env)
