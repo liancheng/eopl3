@@ -15,7 +15,7 @@ Contents
 Overview
 ########
 
-This documentation is my (incomplete) solutions to `EoPL3`__ exercises. The source code can be found on `GitHub`__.
+This documentation is my (incomplete) solutions to `Essentials of Programming Languages 3rd edition`__ exercises. The source code can be found on `GitHub`__.
 
 The Scheme code is written using the ``eopl`` dialect provided by DrRacket 6.4. Please refer to `the official DrRacket documentation`__ for more details. Most code snippets are tested using ``rackunit``.
 
