@@ -224,3 +224,19 @@ Exercise 2.14
 .. literalinclude:: 02-14.rkt
     :language: scheme
     :linenos:
+    :emphasize-lines: 10,18-21,23-24,26-27,29-30
+
+Exercise 2.15
+=============
+
+.. literalinclude:: 02-15.rkt
+    :language: scheme
+    :linenos:
+
+Exercise 2.16
+=============
+
+.. literalinclude:: 02-16.rkt
+    :language: scheme
+    :linenos:
+    :emphasize-lines: 10,22,41
