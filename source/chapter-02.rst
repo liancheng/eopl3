@@ -203,3 +203,24 @@ Exercise 2.11
 .. literalinclude:: 02-11.rkt
     :language: scheme
     :linenos:
+
+Exercise 2.12
+=============
+
+.. literalinclude:: 02-12.rkt
+    :language: scheme
+    :linenos:
+
+Exercise 2.13
+=============
+
+.. literalinclude:: 02-13.rkt
+    :language: scheme
+    :linenos:
+
+Exercise 2.14
+=============
+
+.. literalinclude:: 02-14.rkt
+    :language: scheme
+    :linenos:
