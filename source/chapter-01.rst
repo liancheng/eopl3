@@ -24,6 +24,8 @@ Exercise 1.1
 
             2 \in S
 
+        .. math::
+
             \frac {
                 n \in S
             } {
@@ -49,6 +51,8 @@ Exercise 1.1
         .. math::
 
             1 \in S
+
+        .. math::
 
             \frac {
                 n \in S
@@ -76,6 +80,8 @@ Exercise 1.1
 
             (0, 1) \in S
 
+        .. math::
+
             \frac {
                 (n, m) \in S
             } {
@@ -100,6 +106,8 @@ Exercise 1.1
         .. math::
 
             (0, 0) \in S
+
+        .. math::
 
             \frac {
                 (n, m) \in S
@@ -199,7 +207,11 @@ Exercise 1.3
 
     0 \in T
 
+.. math::
+
     1 \in T
+
+.. math::
 
     \frac {
         n \in T

@@ -75,6 +75,8 @@ Proof
 
         x \in S
 
+    .. math::
+
         \frac {
             y \in S
         } {
