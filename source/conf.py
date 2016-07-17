@@ -31,6 +31,7 @@ import os
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
+    'sphinxcontrib.programoutput',
 ]
 
 # MathJax settings
