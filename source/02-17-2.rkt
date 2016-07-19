@@ -4,27 +4,36 @@
          rackunit)
 
 (define (var-exp var)
-  `(var-exp ,var))
+  (cons 'var-exp
+        (lambda () var)))
 
 (define (lambda-exp bound-var body)
-  `(lambda-exp ,bound-var ,body))
+  (cons 'lambda-exp
+        (lambda (field)
+          (match field
+                 ['bound-var bound-var]
+                 ['body body]))))
 
 (define (app-exp rator rand)
-  `(app-exp ,rator ,rand))
+  (cons 'app-exp
+        (lambda (field)
+          (match field
+                 ['rator rator]
+                 ['rand rand]))))
 
 (define (var-exp? exp)
   (match exp
-         [(list 'var-exp (? symbol?)) #t]
+         [(cons 'var-exp _) #t]
          [_ #f]))
 
 (define (lambda-exp? exp)
   (match exp
-         [(list 'lambda-exp (? var-exp?) (? lc-exp?)) #t]
+         [(cons 'lambda-exp _) #t]
          [_ #f]))
 
 (define (app-exp? exp)
   (match exp
-         [(list 'app-exp (? lc-exp?) (? lc-exp?)) #t]
+         [(cons 'app-exp _) #t]
          [_ #f]))
 
 (define (lc-exp? exp)
@@ -33,24 +42,19 @@
       (app-exp? exp)))
 
 (define (var-exp->var exp)
-  (match exp
-         [(list 'var-exp var) var]))
+  ((cdr exp)))
 
 (define (lambda-exp->bound-var exp)
-  (match exp
-         [(list 'lambda-exp bound-var _) bound-var]))
+  ((cdr exp) 'bound-var))
 
 (define (lambda-exp->body exp)
-  (match exp
-         [(list 'lambda-exp _ body) body]))
+  ((cdr exp) 'body))
 
 (define (app-exp->rator exp)
-  (match exp
-         [(list 'app-exp rator _) rator]))
+  ((cdr exp) 'rator))
 
 (define (app-exp->rand exp)
-  (match exp
-         [(list 'app-exp _ rand) rand]))
+  ((cdr exp) 'rand))
 
 (let ([a (var-exp 'a)])
   (check-true (var-exp? a))

@@ -3,28 +3,24 @@
 (require racket/match
          rackunit)
 
-(define (var-exp var)
-  `(var-exp ,var))
+(define (var-exp var) var)
 
 (define (lambda-exp bound-var body)
-  `(lambda-exp ,bound-var ,body))
+  `(,bound-var ,body))
 
 (define (app-exp rator rand)
-  `(app-exp ,rator ,rand))
+  `(,rator ,rand))
 
-(define (var-exp? exp)
-  (match exp
-         [(list 'var-exp (? symbol?)) #t]
-         [_ #f]))
+(define (var-exp? exp) (symbol? exp))
 
 (define (lambda-exp? exp)
   (match exp
-         [(list 'lambda-exp (? var-exp?) (? lc-exp?)) #t]
+         [(list (? var-exp?) (? lc-exp?)) #t]
          [_ #f]))
 
 (define (app-exp? exp)
   (match exp
-         [(list 'app-exp (? lc-exp?) (? lc-exp?)) #t]
+         [(list (? lc-exp?) (? lc-exp?)) #t]
          [_ #f]))
 
 (define (lc-exp? exp)
@@ -32,25 +28,23 @@
       (lambda-exp? exp)
       (app-exp? exp)))
 
-(define (var-exp->var exp)
-  (match exp
-         [(list 'var-exp var) var]))
+(define (var-exp->var exp) exp)
 
 (define (lambda-exp->bound-var exp)
   (match exp
-         [(list 'lambda-exp bound-var _) bound-var]))
+         [(list bound-var _) bound-var]))
 
 (define (lambda-exp->body exp)
   (match exp
-         [(list 'lambda-exp _ body) body]))
+         [(list _ body) body]))
 
 (define (app-exp->rator exp)
   (match exp
-         [(list 'app-exp rator _) rator]))
+         [(list rator _) rator]))
 
 (define (app-exp->rand exp)
   (match exp
-         [(list 'app-exp _ rand) rand]))
+         [(list _ rand) rand]))
 
 (let ([a (var-exp 'a)])
   (check-true (var-exp? a))

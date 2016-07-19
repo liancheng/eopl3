@@ -242,3 +242,20 @@ Exercise 2.16
     :language: scheme
     :linenos:
     :emphasize-lines: 10,22,41
+
+Exercise 2.17
+=============
+
+Representation 1
+----------------
+
+.. literalinclude:: 02-17-1.rkt
+    :language: scheme
+    :linenos:
+
+Representation 2
+----------------
+
+.. literalinclude:: 02-17-2.rkt
+    :language: scheme
+    :linenos:
