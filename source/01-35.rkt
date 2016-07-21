@@ -3,6 +3,7 @@
 (require "01-31.scm"
          rackunit)
 
+;; begin
 (define (number-leaves tree)
   (define (number n node)
     (if (leaf? node)
@@ -17,6 +18,7 @@
                                     new-lson
                                     new-rson)))))
   (cadr (number 0 tree)))
+;; end
 
 (check-equal?
   (number-leaves

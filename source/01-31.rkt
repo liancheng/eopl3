@@ -4,6 +4,7 @@
 
 (provide leaf interior-node leaf? lson rson contents-of)
 
+;; begin
 (define (leaf n) n)
 
 (define (interior-node name lson rson)
@@ -19,6 +20,7 @@
 (define (contents-of tree)
   (cond [(leaf? tree) tree]
         [else (car tree)]))
+;; end
 
 (check-equal? (leaf 1) 1)
 

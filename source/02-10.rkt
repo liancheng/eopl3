@@ -7,6 +7,7 @@
 
 (provide extend-env*)
 
+;; begin
 (define (extend-env* vars vals env)
   (if (null? vars)
     env
@@ -15,6 +16,7 @@
                  (extend-env (car vars)
                              (car vals)
                              env))))
+;; end
 
 (check-equal? (extend-env* '(a b c) '(1 2 3) (empty-env))
               (extend-env 'c 3

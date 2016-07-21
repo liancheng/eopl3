@@ -10,11 +10,11 @@
          successor predecessor
          check-diff-tree=?)
 
+;; begin
 (define-datatype diff-tree diff-tree?
                  (one)
-                 (diff
-                   (lhs diff-tree?)
-                   (rhs diff-tree?)))
+                 (diff (lhs diff-tree?)
+                       (rhs diff-tree?)))
 
 (define (zero) (diff (one) (one)))
 
@@ -42,6 +42,7 @@
 
 (define (predecessor n)
   (diff n (one)))
+;; end
 
 (define-binary-check
   (check-diff-tree=? diff-tree=? actual expected))

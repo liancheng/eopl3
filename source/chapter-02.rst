@@ -11,6 +11,8 @@ Bigits implementation
 .. literalinclude:: 02-01.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Factorial experiments
 ---------------------
@@ -18,6 +20,7 @@ Factorial experiments
 .. literalinclude:: 02-01-fact.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
 
 Conclusions:
 
@@ -93,6 +96,8 @@ Question 2
 .. literalinclude:: 02-03-2.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Question 3
 ----------
@@ -100,6 +105,7 @@ Question 3
 .. literalinclude:: 02-03-3.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
 
 Exercise 2.4
 ============
@@ -138,6 +144,8 @@ Exercise 2.5
 .. literalinclude:: 02-05.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.6
 ============
@@ -150,6 +158,8 @@ Represent environments as functions.
 .. literalinclude:: 02-06-1.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Implementation 2
 ----------------
@@ -159,6 +169,8 @@ A representation that doesn't allow variable "shadowing":
 .. literalinclude:: 02-06-2.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Implementation 3
 ----------------
@@ -168,6 +180,8 @@ Represent environments as "ribs": a pair consists of a list of variables and a l
 .. literalinclude:: 02-06-3.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.7
 ============
@@ -184,6 +198,8 @@ Exercise 2.8
 .. literalinclude:: 02-08.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.9
 ============
@@ -191,6 +207,8 @@ Exercise 2.9
 .. literalinclude:: 02-09.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.10
 =============
@@ -198,6 +216,8 @@ Exercise 2.10
 .. literalinclude:: 02-10.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.11
 =============
@@ -205,6 +225,8 @@ Exercise 2.11
 .. literalinclude:: 02-11.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.12
 =============
@@ -212,6 +234,8 @@ Exercise 2.12
 .. literalinclude:: 02-12.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.13
 =============
@@ -219,6 +243,8 @@ Exercise 2.13
 .. literalinclude:: 02-13.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.14
 =============
@@ -226,7 +252,9 @@ Exercise 2.14
 .. literalinclude:: 02-14.rkt
     :language: scheme
     :linenos:
-    :emphasize-lines: 10,18-21,23-24,26-27,29-30
+    :emphasize-lines: 5, 13-16, 18-25
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.15
 =============
@@ -234,6 +262,8 @@ Exercise 2.15
 .. literalinclude:: 02-15.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.16
 =============
@@ -241,7 +271,9 @@ Exercise 2.16
 .. literalinclude:: 02-16.rkt
     :language: scheme
     :linenos:
-    :emphasize-lines: 10,22,41
+    :emphasize-lines: 5, 17, 36
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.17
 =============
@@ -252,6 +284,8 @@ Representation 1
 .. literalinclude:: 02-17-1.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Representation 2
 ----------------
@@ -259,3 +293,14 @@ Representation 2
 .. literalinclude:: 02-17-2.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
+
+Exercise 2.18
+=============
+
+.. literalinclude:: 02-18.rkt
+    :language: scheme
+    :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end

@@ -3,6 +3,7 @@
 (require racket
          rackunit)
 
+;; begin
 (define (empty-env)
   (cons (lambda (search-var)
           (report-no-binding-found search-var))
@@ -23,6 +24,7 @@
 
 (define (report-no-binding-found search-var)
   (eopl:error 'apply-env "No binding for ~s" search-var))
+;; end
 
 (check-true (empty-env? (empty-env)))
 

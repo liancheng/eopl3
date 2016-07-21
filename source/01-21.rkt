@@ -2,6 +2,7 @@
 
 (require rackunit)
 
+;; begin
 (define (product sos1 sos2)
   (flat-map (lambda (e1)
               (map (lambda (e2)
@@ -17,3 +18,4 @@
 
 (check-equal? (product '(a b c) '(x y))
               '((a x) (a y) (b x) (b y) (c x) (c y)))
+;; end

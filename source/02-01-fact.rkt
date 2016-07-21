@@ -2,6 +2,7 @@
 
 (require "02-01.scm")
 
+;; begin
 (define (with-base n thunk)
   (let [(orig-base base)]
     (begin
@@ -19,6 +20,7 @@
         base
         n
         (bigits->integer (factorial (integer->bigits n)))))))
+;; end
 
 (for-each (lambda (n)
             (time (print-factorial n 10)))

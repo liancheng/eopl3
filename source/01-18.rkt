@@ -2,6 +2,7 @@
 
 (require rackunit)
 
+;; begin
 (define (swapper s1 s2 slist)
   (map (lambda (sexp)
          (swapper-in-s-sexp s1 s2 sexp))
@@ -14,6 +15,7 @@
                       [(eqv? s2 sexp) s1]
                       [else sexp])]
     [else (swapper s1 s2 sexp)]))
+;; end
 
 (check-equal? (swapper 'a 'd '(a b c d))
               '(d b c a))

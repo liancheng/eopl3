@@ -3,6 +3,7 @@
 (require "01-31.scm"
          rackunit)
 
+;; begin
 (define (mark-leaves-with-red-depth tree)
   (let mark [(n 0) (node tree)]
     (cond [(leaf? node) (leaf n)]
@@ -13,6 +14,7 @@
           [else (interior-node (contents-of node)
                                (mark n (lson node))
                                (mark n (rson node)))])))
+;; end
 
 (check-equal? (mark-leaves-with-red-depth
                 (interior-node 'red

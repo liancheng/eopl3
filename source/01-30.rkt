@@ -2,6 +2,7 @@
 
 (require rackunit)
 
+;; begin
 (define (sort/predicate pred loi)
   (define (merge-sort lst)
     (cond [(null? lst) '()]
@@ -17,6 +18,7 @@
                                             (merge/predicate pred (cdr loi1) loi2))]
         [else (cons (car loi2)
                     (merge/predicate pred loi1 (cdr loi2)))]))
+;; end
 
 (check-equal? (sort/predicate < '(8 2 5 2 3))
               '(2 2 3 5 8))

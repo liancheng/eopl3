@@ -2,6 +2,7 @@
 
 (require racket rackunit)
 
+;; begin
 (define (nth-element lst n)
   (let nth-element-impl ([lst0 lst] [n0 n])
     (if (null? lst0)
@@ -13,6 +14,7 @@
 (define (report-list-too-short lst n)
   (eopl:error 'nth-element
               "List ~s does not have ~s elements" lst n))
+;; end
 
 (check-equal? (nth-element '(a b c) 2)
               'c)

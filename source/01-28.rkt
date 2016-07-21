@@ -4,6 +4,7 @@
 
 (provide merge)
 
+;; begin
 (define (merge loi1 loi2)
   (cond [(null? loi1) loi2]
         [(null? loi2) loi1]
@@ -11,6 +12,7 @@
                                          (merge (cdr loi1) loi2))]
         [else (cons (car loi2)
                     (merge loi1 (cdr loi2)))]))
+;; end
 
 (check-equal? (merge '(1 4) '(1 2 8))
               '(1 1 2 4 8))

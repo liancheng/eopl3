@@ -2,10 +2,12 @@
 
 (require rackunit)
 
+;; begin
 (define (duple n sexp)
   (if (zero? n)
     '()
     (cons sexp (duple (- n 1) sexp))))
+;; end
 
 (check-equal? (duple 2 'a)
               '(a a))

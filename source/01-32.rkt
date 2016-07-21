@@ -3,6 +3,7 @@
 (require "01-31.scm"
          rackunit)
 
+;; begin
 (define (double-tree tree)
   (cond [(leaf? tree)
          (leaf (* 2 (contents-of tree)))]
@@ -10,6 +11,7 @@
           (interior-node (contents-of tree)
                          (double-tree (lson tree))
                          (double-tree (rson tree)))]))
+;; end
 
 (check-equal? (double-tree
                 (interior-node 'foo

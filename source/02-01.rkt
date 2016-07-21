@@ -10,6 +10,7 @@
          integer->bigits bigits->integer
          plus multiply factorial)
 
+;; begin
 (define base 10)
 
 (define (set-base! n)
@@ -60,6 +61,7 @@
   (if (is-zero? n)
     (successor (zero))
     (multiply n (factorial (predecessor n)))))
+;; end
 
 (run-tests
   (test-suite

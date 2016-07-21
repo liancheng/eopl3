@@ -265,6 +265,8 @@ Exercise 1.7
 .. literalinclude:: 01-07.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.8
 ============
@@ -283,6 +285,8 @@ Exercise 1.9
 .. literalinclude:: 01-09.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.10
 =============
@@ -300,6 +304,8 @@ Exercise 1.12
 .. literalinclude:: 01-12.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.13
 =============
@@ -307,6 +313,8 @@ Exercise 1.13
 .. literalinclude:: 01-13.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.14
 =============
@@ -349,6 +357,8 @@ Exercise 1.15
 .. literalinclude:: 01-15.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.16
 =============
@@ -356,6 +366,8 @@ Exercise 1.16
 .. literalinclude:: 01-16.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.17
 =============
@@ -363,6 +375,8 @@ Exercise 1.17
 .. literalinclude:: 01-17.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.18
 =============
@@ -370,6 +384,8 @@ Exercise 1.18
 .. literalinclude:: 01-18.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.19
 =============
@@ -377,6 +393,8 @@ Exercise 1.19
 .. literalinclude:: 01-19.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.20
 =============
@@ -384,6 +402,8 @@ Exercise 1.20
 .. literalinclude:: 01-20.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.21
 =============
@@ -391,6 +411,8 @@ Exercise 1.21
 .. literalinclude:: 01-21.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.22
 =============
@@ -398,6 +420,8 @@ Exercise 1.22
 .. literalinclude:: 01-22.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.23
 =============
@@ -405,6 +429,8 @@ Exercise 1.23
 .. literalinclude:: 01-23.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.24
 =============
@@ -412,6 +438,8 @@ Exercise 1.24
 .. literalinclude:: 01-24.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.25
 =============
@@ -419,6 +447,8 @@ Exercise 1.25
 .. literalinclude:: 01-25.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.26
 =============
@@ -426,6 +456,8 @@ Exercise 1.26
 .. literalinclude:: 01-26.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.27
 =============
@@ -433,6 +465,8 @@ Exercise 1.27
 .. literalinclude:: 01-27.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.28
 =============
@@ -440,6 +474,8 @@ Exercise 1.28
 .. literalinclude:: 01-28.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.29
 =============
@@ -447,6 +483,8 @@ Exercise 1.29
 .. literalinclude:: 01-29.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.30
 =============
@@ -454,6 +492,8 @@ Exercise 1.30
 .. literalinclude:: 01-30.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.31
 =============
@@ -461,6 +501,8 @@ Exercise 1.31
 .. literalinclude:: 01-31.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.32
 =============
@@ -468,6 +510,8 @@ Exercise 1.32
 .. literalinclude:: 01-32.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.33
 =============
@@ -475,6 +519,8 @@ Exercise 1.33
 .. literalinclude:: 01-33.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.34
 =============
@@ -482,6 +528,8 @@ Exercise 1.34
 .. literalinclude:: 01-34.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.35
 =============
@@ -489,6 +537,8 @@ Exercise 1.35
 .. literalinclude:: 01-35.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 1.36
 =============
@@ -496,3 +546,5 @@ Exercise 1.36
 .. literalinclude:: 01-36.rkt
     :language: scheme
     :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end

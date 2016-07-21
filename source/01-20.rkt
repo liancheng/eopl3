@@ -2,6 +2,7 @@
 
 (require rackunit)
 
+;; begin
 (define (count-occurrences s slist)
   (if (null? slist)
     0
@@ -12,6 +13,7 @@
   (if (symbol? sexp)
     (if (eqv? sexp s) 1 0)
     (count-occurrences s sexp)))
+;; end
 
 (check-equal? (count-occurrences 'x '((f x) y (((x z) x)))) 3)
 (check-equal? (count-occurrences 'x '((f x) y (((x z) () x)))) 3)

@@ -3,6 +3,7 @@
 (require racket/match
          rackunit)
 
+;; begin
 (define (var-exp var)
   `(var-exp ,var))
 
@@ -51,6 +52,7 @@
 (define (app-exp->rand exp)
   (match exp
          [(list 'app-exp _ rand) rand]))
+;; end
 
 (let ([a (var-exp 'a)])
   (check-true (var-exp? a))

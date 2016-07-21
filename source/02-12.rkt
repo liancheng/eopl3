@@ -2,6 +2,7 @@
 
 (require rackunit)
 
+;; begin
 (define (empty-stack)
   (list #t
         (lambda ()
@@ -34,6 +35,7 @@
 
 (define-binary-check
   (check-stack=? stack=? actual expected))
+;; end
 
 (check-true (empty-stack? (empty-stack)))
 
