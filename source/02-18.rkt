@@ -1,6 +1,7 @@
 #lang eopl
 
-(require rackunit)
+(require racket
+         rackunit)
 
 ;; begin
 (define (number->sequence n)
@@ -54,9 +55,21 @@
   (null? (caddr seq)))
 ;; end
 
-(let [(seq (number->sequence 1))]
-  (check-equal? seq '(1 () ()))
-  (check-equal? (insert-to-left 2 seq)
-                '(1 (2) ()))
-  (check-equal? (insert-to-right 2 seq)
-                '(1 () (2))))
+(let* [(seq0 (number->sequence 1))
+       (seq1 (insert-to-left 2 seq0))
+       (seq2 (insert-to-right 3 seq1))]
+  (check-equal? seq0 '(1 () ()))
+  (check-equal? seq1 '(1 (2) ()))
+  (check-equal? seq2 '(1 (2) (3)))
+
+  (check-equal? (move-to-left seq2) '(2 () (1 3)))
+  (check-equal? (move-to-right seq2) '(3 (1 2) ()))
+
+  (check-exn #rx"move-to-left:.*"
+             (lambda () (move-to-left seq0)))
+
+  (check-exn #rx"move-to-right:.*"
+             (lambda () (move-to-right seq0)))
+
+  (check-true (at-left-end? seq0))
+  (check-true (at-right-end? seq0)))
