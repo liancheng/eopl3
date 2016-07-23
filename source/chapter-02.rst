@@ -304,3 +304,12 @@ Exercise 2.18
     :linenos:
     :start-after: ;; begin
     :end-before: ;; end
+
+Exercise 2.19
+=============
+
+.. literalinclude:: 02-19.rkt
+    :language: scheme
+    :linenos:
+    :start-after: ;; begin
+    :end-before: ;; end

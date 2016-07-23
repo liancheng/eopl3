@@ -62,8 +62,15 @@
   (check-equal? seq1 '(1 (2) ()))
   (check-equal? seq2 '(1 (2) (3)))
 
-  (check-equal? (move-to-left seq2) '(2 () (1 3)))
-  (check-equal? (move-to-right seq2) '(3 (1 2) ()))
+  (check-equal? (move-to-left seq2)
+                '(2 () (1 3)))
+
+  (check-equal? (move-to-right seq2)
+                '(3 (1 2) ()))
+
+  (check-equal? (current-element seq2) 1)
+  (check-equal? (current-element (move-to-left seq2)) 2)
+  (check-equal? (current-element (move-to-right seq2)) 3)
 
   (check-exn #rx"move-to-left:.*"
              (lambda () (move-to-left seq0)))
