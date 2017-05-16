@@ -1,6 +1,8 @@
 Solutions to EoPL3 Exercises
 ============================
 
+:Author: Cheng Lian <lian.cs.zju@gmail.com>
+
 ########
 Contents
 ########

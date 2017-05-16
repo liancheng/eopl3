@@ -21,6 +21,7 @@ Factorial experiments
     :language: scheme
     :linenos:
     :start-after: ;; begin
+    :end-before: ;; end
 
 Conclusions:
 

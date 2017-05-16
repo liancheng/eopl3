@@ -144,7 +144,7 @@ Exercise 1.2
             \begin{cases}
                 0 & n = 0 \\
                 1 & n = 1 \\
-                F(n - 1) + F(n - 2), & n > 1
+                F(n - 1) + F(n - 2) & n > 1
             \end{cases}
 
 #.  :math:`(0, 1, 0) \in S \quad \displaystyle \frac{(n, i, j) \in S}{(n + 1, i + 2, i + j) \in S}`
