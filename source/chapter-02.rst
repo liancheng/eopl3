@@ -107,6 +107,7 @@ Question 3
     :language: scheme
     :linenos:
     :start-after: ;; begin
+    :end-before: ;; end
 
 Exercise 2.4
 ============
